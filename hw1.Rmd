@@ -36,7 +36,9 @@ The first graph is telling you the relationship of the car price and the horsepo
 #Plot the graph
 x = as.numeric(avg_price)
 y = as.numeric(hp)
-plot(x, y, xlab = "Price($)", ylab = "HP(hp)", col = "blue", pch = 16, xlim = c(0,200000),ylim = c(70,500))
+
+plot(x, y, xlab = "Price($)", ylab = "Horsepower(hp)", col = "blue", pch = 1, xlim = c(0,200000),ylim = c(50,500))
+grid(nx = NULL, ny = NULL, col = "lightgray", lty = "dotted")
 axis(side = 1, at = seq(0,200000, by = 10000),labels = FALSE, tcl = -0.2)
 axis(side = 2, at = seq(70,500, by = 10),labels = FALSE, tcl = -0.2)
 
@@ -46,7 +48,7 @@ y = predict(model, newdata = list(x))
 matlines(x, y, lwd = 2, col = "red")
 
 #Add the legend on the graph
-legend("bottomright",legend = c("raw data", "log regression line"), col = c("blue", "red"), cex = 0.8, lty = c(NA, 1), pch = c(16, NA))
+legend("bottomright",legend = c("raw data", "log regression line"), col = c("blue", "red"), cex = 0.8, lty = c(NA, 1), pch = c(1, NA))
 ```
 
 The second graph is telling you the relationship of the car price and the city MPG. By seeing the red non-linear regression line, you can recognize that as the city MPG becomes lower, the car price becomes higher. In other words, the cars that have high city MPG cost low.
@@ -54,7 +56,8 @@ The second graph is telling you the relationship of the car price and the city M
 #Plot the graph
 x = as.numeric(avg_price)
 y = as.numeric(city_mpg)
-plot(x, y, xlab = "Price($)", ylab = "City MPG(Miles per Gallon)", col = "blue", pch = 16, xlim = c(0,200000) , ylim = c(10,70))
+plot(x, y, xlab = "Price($)", ylab = "City MPG(Miles per Gallon)", col = "blue", pch = 1, xlim = c(0,200000) , ylim = c(10,65))
+grid(nx = NULL, ny = NULL, col = "lightgray", lty = "dotted")
 axis(side = 1, at = seq(0,200000, by = 10000),labels = FALSE, tcl = -0.2)
 axis(side = 2, at = seq(10,70, by = 2),labels = FALSE, tcl = -0.2)
 
@@ -64,7 +67,7 @@ y = predict(model, newdata = list(x))
 matlines(x, y, lwd = 2, col = "red")
 
 #Add the legend on the graph
-legend("topright",legend = c("raw data", "log regression line"), col = c("blue", "red"), cex = 0.8, lty = c(NA, 1), pch = c(16, NA))
+legend("topright",legend = c("raw data", "log regression line"), col = c("blue", "red"), cex = 0.8, lty = c(NA, 1), pch = c(1, NA))
 ```
 
 The third graph is telling you the relationship of the car price and the highway MPG. By seeing the red non-linear regression line, you can recognize that as the highway MPG becomes lower, the car price becomes higher. In other words, the cars that have high highway MPG cost low. This graph shows the same mechanism as the graph of City MPG vs Price.
@@ -72,7 +75,8 @@ The third graph is telling you the relationship of the car price and the highway
 #Plot the graph
 x = as.numeric(avg_price)
 y = as.numeric(hwy_mpg)
-plot(x, y, xlab = "Price($)", ylab = "Highway MPG(Miles per Gallon)", col = "blue", pch = 16, xlim = c(0,200000) , ylim = c(10,70))
+plot(x, y, xlab = "Price($)", ylab = "Highway MPG(Miles per Gallon)", col = "blue", pch = 1, xlim = c(0,200000) , ylim = c(10,70))
+grid(nx = NULL, ny = NULL, col = "lightgray", lty = "dotted")
 axis(side = 1, at = seq(0,200000, by = 10000), labels = FALSE, tcl = -0.2)
 axis(side = 2, at = seq(10,70, by = 2), labels = FALSE, tcl = -0.2)
 
@@ -82,7 +86,7 @@ y = predict(model, newdata = list(x))
 matlines(x, y, lwd = 2, col = "red")
 
 #Add the legend on the graph
-legend("topright",legend = c("raw data", "log regression line"), col = c("blue", "red"), cex = 0.8, lty = c(NA, 1), pch = c(16, NA))
+legend("topright",legend = c("raw data", "log regression line"), col = c("blue", "red"), cex = 0.8, lty = c(NA, 1), pch = c(1, NA))
 ```
 
 
